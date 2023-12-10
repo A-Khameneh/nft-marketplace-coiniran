@@ -36,8 +36,8 @@ describe("NFTMarketplace", () => {
     });
 
     it("Should track feeAccount and feePercent of the marketplace", async function () {
-        expect(await marketplace.feeAccount()).to.equal(deployer.address);
-        expect(await marketplace.feePercent()).to.equal(feePercent);
+        expect(await market.feeAccount()).to.equal(deployer.address);
+        expect(await market.feePercent()).to.equal(feePercent);
     });
 
   })
