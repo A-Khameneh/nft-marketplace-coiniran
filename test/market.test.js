@@ -166,14 +166,14 @@ describe("NFTMarketplace", () => {
       await expect(
         market.connect(addr2).purchaseItem(1, {value: toWei(price)})
       ).to.be.revertedWith("not enough ether to cover item price and market fee"); 
-      /*// addr2 purchases item 1
+      // addr2 purchases item 1
       await market.connect(addr2).purchaseItem(1, {value: totalPriceInWei})
       // addr3 tries purchasing item 1 after its been sold 
       const addr3 = addrs[0]
       //console.log(await deployer.provider.getBalance(addr3.address))
       await expect(
         market.connect(addr3).purchaseItem(1, {value: totalPriceInWei})
-      ).to.be.revertedWith("item already sold");*/
+      ).to.be.revertedWith("item already sold");
     });
 
   })
