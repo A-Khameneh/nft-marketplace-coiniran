@@ -70,12 +70,11 @@
 
 
 * This project is simple NFT Marketplace that you can create and mint NFTs as ERC721 Standards 
-By this project you create a contract for selling your NFTs and set contribution for anyone that work with you in that. Payment for contributer would be per their contribution and every contributer  can just withdraw its portion.
-* 3 percent of any  buying payment of NFT send to marketplace account. 
+By this project you create a contract for selling your NFTs.
+* In this project, a percentage of the sale of NFTs is given to the owner of Market Place. 
 * Marketplace account has the right of the contracts in other word for transferring your NFT you must take action from marketplace smartcontract.
-* The main problem in  CopyrightManagment system is prevent people from coping files. We will work more in this section.
-* We will keep going to improve the security of media and add new features per user requirements.
-* In this project we use factory pattern for marketplace and use reentrancyGuard from openzeppelin that prevent from reentrancy attack
+* We will keep going to improve the security of marketplace and add new features per user requirements.
+* In this project we use factory pattern for marketplace.
 
 
 
@@ -94,7 +93,7 @@ This is an example of how to list things you need to use the software and how to
   npm install  -g yarn
   ```
 
-  # Hardhat framwork
+# Hardhat framwork
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
@@ -162,23 +161,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- Video -->
 ## Video
 
- - [CopyrighManagment](https://mega.nz/file/uwJzQQCQ#GNynF2FQ_RqWSbibMqeiq3ofeXC378WSscmY0tgLwD8) 
-
-<!-- Midterm -->
-## Midterm
-
- - [Midtrem](https://t.me/hadihpn) - persnb@gmail.com
- Video: - [CopyrighManagment](https://mega.nz/file/HoZ2UYwA#eqpFdPBCUHI2l4ffqWN8lyuMOliKMaCLyz2M6NfGhic)
-
-  Project Link: [https://github.com/Hadihpn/MyFundMe](https://github.com/Hadihpn/MyFundMe)
-
-
+ - [NFT Marketplace](https://mega.nz/file/uwJzQQCQ#GNynF2FQ_RqWSbibMqeiq3ofeXC378WSscmY0tgLwD8) 
 
 <!-- CONTACT -->
 ## Contact
 
-Hadihpn - [@hadihpn](https://t.me/hadihpn) - persnb@gmail.com
+- [Telegram link] (https://t.me/davidakh9) - mt.d.abdollahian@gmail.com
+ Video: - [CopyrighManagment](https://mega.nz/file/TI8xwDLa#XV10KwKzzKpwxTUeNuDC9YVJAODKCN-GhKv9adJoOVw)
 
-Project Link: [https://github.com/Hadihpn/copyrightManagment](https://github.com/Hadihpn/copyrightManagment)
+  Project Link: https://github.com/A-Khameneh/nft-marketplace-coiniran
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
