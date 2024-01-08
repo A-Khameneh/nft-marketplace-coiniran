@@ -161,13 +161,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- Video -->
 ## Video
 
- - [NFT Marketplace](https://mega.nz/file/uwJzQQCQ#GNynF2FQ_RqWSbibMqeiq3ofeXC378WSscmY0tgLwD8) 
+ - [NFT Marketplace](https://mega.nz/file/qRV1xSjb#83-TxaWLjssK4zNXsHD8vMrT4LhffU_JYYmZQSxG4vA) 
 
 <!-- CONTACT -->
 ## Contact
 
 - [Telegram link] (https://t.me/davidakh9) - mt.d.abdollahian@gmail.com
- Video: - [CopyrighManagment](https://mega.nz/file/TI8xwDLa#XV10KwKzzKpwxTUeNuDC9YVJAODKCN-GhKv9adJoOVw)
+ Video: - [CopyrighManagment](https://mega.nz/file/qRV1xSjb#83-TxaWLjssK4zNXsHD8vMrT4LhffU_JYYmZQSxG4vA)
 
   Project Link: https://github.com/A-Khameneh/nft-marketplace-coiniran
 
