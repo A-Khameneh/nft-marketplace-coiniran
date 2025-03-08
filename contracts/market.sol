@@ -12,13 +12,19 @@ contract Market {
     uint public immutable feePercent; // the fee percentage on sales 
     uint public itemCount; 
 
+    enum ItemStatus {
+        Available,
+        Sold,
+        Canceled
+    }
+
     struct Item {
         uint itemId;
         IERC721 nft;
         uint tokenId;
         uint price;
         address payable seller;
-        bool sold;
+        ItemStatus status;
     }
 
     // itemId -> Item
@@ -39,6 +45,15 @@ contract Market {
         uint price,
         address indexed seller,
         address indexed buyer
+    );
+
+    event Canceled(
+
+        uint itemId, 
+        address indexed nft, 
+        uint tokenId, 
+        address indexed seller
+
     );
 
     constructor(uint _feePercent) {
@@ -64,7 +79,7 @@ contract Market {
             _tokenId,
             _price,
             payable(msg.sender),
-            false
+            ItemStatus.Available
         );
 
         // emit Offered event
@@ -84,12 +99,12 @@ contract Market {
         
         require(_itemId > 0 && _itemId <= itemCount, "item doesn't exist");
         require(msg.value >= _totalPrice, "not enough ether to cover item price and market fee");
-        require(!item.sold, "item already sold");
+        require(item.status == ItemStatus.Available, "Item not available");
         // pay seller and feeAccount
         item.seller.transfer(item.price);
         feeAccount.transfer(_totalPrice - item.price);
         // update item to sold
-        item.sold = true;
+        item.status = ItemStatus.Sold;
         // transfer nft to buyer
         item.nft.transferFrom(address(this), msg.sender, item.tokenId);
         // emit Bought event
@@ -101,6 +116,23 @@ contract Market {
             item.seller,
             msg.sender
         );
+    }
+
+    function cancelItem(uint _itemId) external {
+
+        Item storage item = items[_itemId];
+    
+        require(_itemId > 0 && _itemId <= itemCount, "Item doesn't exist");
+        require(msg.sender == item.seller, "Only seller can cancel");
+        require(item.status == ItemStatus.Available, "Item not available");
+
+        item.status = ItemStatus.Canceled;
+
+        //return nft to seller address
+        item.nft.transferFrom(address(this), item.seller, item.tokenId);
+
+        emit Canceled(_itemId, address(item.nft), item.tokenId, item.seller);
+
     }
 
     function getTotalPrice(uint _itemId) view public returns(uint){
